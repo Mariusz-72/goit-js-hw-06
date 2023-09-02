@@ -3,7 +3,8 @@ const validationInput = document.querySelector("#validation-input");
 
 function checkValidation() {
     const expectedLength = parseInt(validationInput.getAttribute("data-length"));
-    const inputValue = validationInput.value;
+    //- z validationInput pobiera atrybut data-length i konwertuje to na liczbę , potem przypisuje do expectedLength
+    const inputValue = validationInput.value; // pobiera wartość wprowadzoną i przypisuje ją do zmiennej inputValue
 
     if (inputValue.length === expectedLength) {
     validationInput.classList.remove("invalid");
@@ -13,4 +14,4 @@ function checkValidation() {
     validationInput.classList.add("invalid");
         }
 }
-    validationInput.addEventListener("blur", checkValidation);
+    validationInput.addEventListener("blur", checkValidation); // na koniec nasłuch na blur'a na 'validationInput'
