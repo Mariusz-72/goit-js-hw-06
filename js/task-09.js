@@ -5,9 +5,10 @@ function getRandomHexColor() {
     .padStart(6, "0")}`;
 }
 
+
 const colorSpan = document.querySelector(".color");
 const changeColorButton = document.querySelector(".change-color");
-const body = document.body;
+const body = document.body;  //(do zmiany koloru tła całej strony)
 
 changeColorButton.addEventListener("click", function ()
 {
