@@ -4,7 +4,7 @@ const emailInput = loginForm.elements.email;
 const passwordInput = loginForm.elements.password;
 
 loginForm.addEventListener("submit", function (event) {
-            event.preventDefault();
+            event.preventDefault(); //<- zatrzymuje odświerzanie formularza
 
     if (emailInput.value === "" || passwordInput.value === "") {
         alert("Wszystkie pola muszą być wypełnione");
@@ -16,6 +16,6 @@ loginForm.addEventListener("submit", function (event) {
     };
 
     console.log(formData); 
-        loginForm.reset();
+        loginForm.reset(); // <- czyszczenie pól 
     }
 });
